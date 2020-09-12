@@ -2,3 +2,6 @@
 *.o
 *.dat
 *.so
+
+# Python environment
+.venv

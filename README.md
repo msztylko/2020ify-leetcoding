@@ -16,4 +16,5 @@ tests: pytest, coverage
 devops: Travis CI  
 formatting: commitizen, flake, C-linter (?)  
 documentation: Sphinx,  interrogate  
-distribution: Docker
+distribution: Docker  
+C/Python integration: Python's module `ctypes` 

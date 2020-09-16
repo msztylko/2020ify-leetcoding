@@ -18,3 +18,5 @@ formatting: commitizen, flake, C-linter (?)
 documentation: Sphinx,  interrogate  
 distribution: Docker  
 C/Python integration: Python's module `ctypes` 
+
+https://azhpushkin.me/posts/python-c-under-the-hood

@@ -26,11 +26,17 @@ int majorityElementBF(int* nums, int numsSize)
 // interesting LC solution
 int majorityElementLC(int* nums, int numsSize)
 {
-    int cnt = 0, res, i = 0;
+    int cnt = 0; 
+    int res = 0;
+    int i = 0;
 
     for (i = 0; i < numsSize; ++i) {
-        if (cnt == 0) res = nums[i];
-        if (res == nums[i]) ++cnt;
+        if (cnt == 0) {
+            res = nums[i];
+        }
+        if (res == nums[i]) {
+            ++cnt;
+        }
         else --cnt;
     }
 

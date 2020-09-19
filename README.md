@@ -17,6 +17,6 @@ devops: Travis CI
 formatting: commitizen, flake, C-linter (?)  
 documentation: Sphinx,  interrogate  
 distribution: Docker  
-C/Python integration: Python's module `ctypes` 
+C/Python integration: Python's module `ctypes`, `CFFI`
 
 https://azhpushkin.me/posts/python-c-under-the-hood

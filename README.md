@@ -14,7 +14,7 @@ To practice my coding skills in C and Python, but also to experiment with modern
 
 tests: pytest, coverage  
 devops: Travis CI  
-formatting: commitizen, flake, C-linter (?)  
+formatting: commitizen, flake8, pylint, C-linter (?)  
 documentation: Sphinx,  interrogate  
 distribution: Docker  
 C/Python integration: Python's module `ctypes`

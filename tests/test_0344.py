@@ -1,10 +1,7 @@
 import ctypes
-import pathlib
 import os
 
-SOLUTIONS_PATH = '/home/marcin/code/2020ify-leetcoding/solutions/0344-reverse-string'
-
-c_path = os.path.join(SOLUTIONS_PATH, 'reverse-string.so')
+c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0344-reverse-string/reverse-string.so'
 c_lib = ctypes.CDLL(c_path)
 c_lib.reverseString.argtypes = [ctypes.POINTER(ctypes.c_char), ctypes.c_int]
 

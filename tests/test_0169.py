@@ -1,11 +1,7 @@
 import ctypes
-import pathlib
-import os
 import pytest
 
-SOLUTIONS_PATH = '/home/marcin/code/2020ify-leetcoding/solutions/0169-majority-element'
-
-c_path = os.path.join(SOLUTIONS_PATH, 'majority-element.so')
+c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0169-majority-element/majority-element.so'
 c_lib = ctypes.CDLL(c_path)
 c_lib.majorityElementBF.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
 c_lib.majorityElementLC.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]

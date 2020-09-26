@@ -1,10 +1,6 @@
 import ctypes
-import pathlib
-import os
 
-SOLUTIONS_PATH = '/home/marcin/code/2020ify-leetcoding/solutions/0136-single-number'
-
-c_path = os.path.join(SOLUTIONS_PATH, 'single-number.so')
+c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0136-single-number/single-number.so'
 c_lib  = ctypes.CDLL(c_path)
 c_lib.singleNumber.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
 

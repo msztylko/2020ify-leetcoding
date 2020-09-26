@@ -12,7 +12,7 @@ all: 0344 1323 0136 0169 0283
 0169:
 	gcc $(CSHARED) -o 0169-majority-element/majority-element.so 0169-majority-element/0169.c
 0283:
-	gcc $(CSHARED) -o 0283-move-zeroes/moves-zeroes.so 0283-move-zeroes/0283.c
+	gcc $(CSHARED) -o 0283-move-zeroes/move-zeroes.so 0283-move-zeroes/0283.c
 
 
 clean:
@@ -20,4 +20,4 @@ clean:
 	rm -f 1323-maximum-69-number/maximum-69-number.so
 	rm -f 0136-single-number/single-number.so
 	rm -f 0169-majority-element/majority-element.so
-	rm -f 0283-move-zeroes/moves-zeroes.so
+	rm -f 0283-move-zeroes/move-zeroes.so

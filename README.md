@@ -17,5 +17,5 @@ devops: Travis CI
 formatting: commitizen, flake8, pylint, C-linter (?)  
 documentation: Sphinx,  interrogate  
 distribution: Docker  
-C/Python integration: Python's module `ctypes`
+C/Python integration: Python's module `ctypes`, Cython
 

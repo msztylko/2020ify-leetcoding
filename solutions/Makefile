@@ -1,7 +1,7 @@
 CFLAGS=-Wall -g
 CSHARED=-fPIC -shared
 
-all: 0344 1323 0136 0169 0283 0013
+all: 0344 1323 0136 0169 0283 0013 0202
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -15,7 +15,8 @@ all: 0344 1323 0136 0169 0283 0013
 	gcc $(CSHARED) -o 0283-move-zeroes/move-zeroes.so 0283-move-zeroes/0283.c
 0013:
 	gcc $(CSHARED) -o 0013-roman-to-integer/roman-to-integer.so 0013-roman-to-integer/0013.c
-
+0202:
+	gcc $(CSHARED) -o 0202-happy-number/happy-number.so 0202-happy-number/0202.c
 
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
@@ -24,3 +25,4 @@ clean:
 	rm -f 0169-majority-element/majority-element.so
 	rm -f 0283-move-zeroes/move-zeroes.so
 	rm -f 0013-roman-to-integer/roman-to-integer.so
+	rm -f 0202-happy-number/happy-number.so

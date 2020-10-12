@@ -1,3 +1,6 @@
+#include <stdbool.h>
+#include <string.h>
+
 bool isAnagram(char *s, char *t)
 {
     int s_count[26] = {0}, t_count[26] = {0};

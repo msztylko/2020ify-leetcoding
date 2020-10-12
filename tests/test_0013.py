@@ -7,4 +7,4 @@ c_lib = ctypes.CDLL(c_path)
 def test_roman_to_integer():
     roman = 'V'
     out = c_lib.romanToInt(roman)
-    assert out ==5
+    assert out == 5

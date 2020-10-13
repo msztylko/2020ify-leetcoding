@@ -1,7 +1,7 @@
 CFLAGS=-Wall -g
 CSHARED=-fPIC -shared
 
-all: 0344 1323 0136 0169 0283 0013 0202 0204 0242
+all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -21,6 +21,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242
 	gcc $(CSHARED) -o 0204-count-primes/count-primes.so 0204-count-primes/0204.c
 0242:
 	gcc $(CSHARED) -o 0242-valid-anagram/valid-anagram.so 0242-valid-anagram/0242.c
+0371:
+	gcc $(CSHARED) -o 0371-sum-two-integers/sum-two-integers.so 0371-sum-two-integers/0371.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -31,3 +33,4 @@ clean:
 	rm -f 0202-happy-number/happy-number.so
 	rm -f 0204-count-primes/count-primes.so
 	rm -f 0242-valid-anagram/valid-anagram.so
+	rm -f 0371-sum-two-integers/sum-two-integers.so

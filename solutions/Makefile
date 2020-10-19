@@ -2,7 +2,7 @@ CFLAGS=-Wall -g
 CSHARED=-fPIC -shared
 
 all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
- 0191 0231 0342 0007 0263 0461
+ 0191 0231 0342 0007 0263 0461 0069
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -38,6 +38,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0263-ugly-number/ugly-number.so 0263-ugly-number/0263.c
 0461:
 	gcc $(CSHARED) -o 0461-hamming-distance/hamming-distance.so 0461-hamming-distance/0461.c
+0069:
+	gcc $(CSHARED) -o 0069-sqrt/sqrt.so 0069-sqrt/0069.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -56,3 +58,4 @@ clean:
 	rm -f 0007-reverse-integer/reverse-integer.so
 	rm -f 0263-ugly-number/ugly-number.so
 	rm -f 0461-hamming-distance/hamming-distance.so
+	rm -f 0069-sqrt/sqrt.so

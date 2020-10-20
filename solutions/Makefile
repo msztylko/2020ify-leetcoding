@@ -2,7 +2,7 @@ CFLAGS=-Wall -g
 CSHARED=-fPIC -shared
 
 all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
- 0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009
+ 0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009 0693 $\
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -48,6 +48,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0476-number-complement/number-complement.so 0476-number-complement/0476.c
 1009:
 	gcc $(CSHARED) -o 1009-complement-base-10/complement-base-10.so 1009-complement-base-10/1009.c
+0693:
+	gcc $(CSHARED) -o 0693-alternating-bits/alternating-bits.so 0693-alternating-bits/0693.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -71,3 +73,4 @@ clean:
 	rm -f 0762-count-prime-bits/count-prime-bits.so
 	rm -f 0476-number-complement/number-complement.so
 	rm -f 1009-complemet-base-10/complement-base-10.so
+	rm -f 0693-alternating-bits/alternating-bits.so

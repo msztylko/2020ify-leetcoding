@@ -3,7 +3,7 @@ CSHARED=-fPIC -shared
 
 all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009 0693 $\
- 0190 1464 0961
+ 0190 1464 0961 0201
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -57,6 +57,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 1464-max-product/max-product.so 1464-max-product/1464.c
 0961:
 	gcc $(CSHARED) -o 0961-repeated-element/repeated-element.so 0961-repeated-element/0961.c
+0201:
+	gcc $(CSHARED) -o 0201-bitwise-and/bitwise-and.so 0201-bitwise-and/0201.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -84,3 +86,4 @@ clean:
 	rm -f 0190-reverse-bits/reverse-bits.so
 	rm -f 1464-max-product/max-product.so
 	rm -f 0961-repeated-element/repeated-element.so
+	rm -f 0201-bitwise-and/bitwise-and.so

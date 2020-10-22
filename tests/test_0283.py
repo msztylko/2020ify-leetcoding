@@ -3,7 +3,6 @@ import pytest
 
 c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0283-move-zeroes/move-zeroes.so'
 c_lib = ctypes.CDLL(c_path)
-c_lib.moveZeroes.argtypes = [ctypes.POINTER(ctypes.c_int), ctypes.c_int]
 
 def test_move_zeroes():
     arr = [0,1,0,3,12]

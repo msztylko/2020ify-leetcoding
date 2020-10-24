@@ -3,7 +3,7 @@ CSHARED=-fPIC -shared
 
 all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009 0693 $\
- 0190 1464 0961 0201 1486
+ 0190 1464 0961 0201 1486 1491
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -61,6 +61,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0201-bitwise-and/bitwise-and.so 0201-bitwise-and/0201.c
 1486:
 	gcc $(CSHARED) -o 1486-xor-array/xor-array.so 1486-xor-array/1486.c
+1491:
+	gcc $(CSHARED) -o 1491-average-salary/average-salary.so 1491-average-salary/1491.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -90,3 +92,4 @@ clean:
 	rm -f 0961-repeated-element/repeated-element.so
 	rm -f 0201-bitwise-and/bitwise-and.so
 	rm -f 1486-xor-array/xor-array.so
+	rm -f 1491-average-salary/average-salary.so

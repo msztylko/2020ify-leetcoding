@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0136-single-number/single-number.so'
-c_lib  = ctypes.CDLL(c_path)
+c_lib  = ctypes.CDLL('../solutions/0136-single-number/single-number.so')
 
 def test_single_number():
     array = [4, 1, 2, 1, 2]

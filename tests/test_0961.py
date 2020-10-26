@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0961-repeated-element/repeated-element.so'
-c_lib = ctypes.CDLL(c_path)
+c_lib = ctypes.CDLL('../solutions/0961-repeated-element/repeated-element.so')
 
 def test_repeated_element():
     array = [1, 2, 3, 3]

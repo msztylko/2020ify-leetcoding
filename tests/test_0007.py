@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0007-reverse-integer/reverse-integer.so'
-c_lib = ctypes.CDLL(c_path)
+c_lib = ctypes.CDLL('../solutions/0007-reverse-integer/reverse-integer.so')
 
 def test_reverse_integer():
     x = 123

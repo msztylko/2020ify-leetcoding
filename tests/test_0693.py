@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0693-alternating-bits/alternating-bits.so'
-c_lib = ctypes.CDLL(c_path)
+c_lib = ctypes.CDLL('../solutions/0693-alternating-bits/alternating-bits.so')
 
 def test_alternating_bits():
     number = 3

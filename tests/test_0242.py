@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0242-valid-anagram/valid-anagram.so'
-c_lib = ctypes.CDLL(c_path)
+c_lib = ctypes.CDLL('../solutions/0242-valid-anagram/valid-anagram.so')
 
 def test_is_anagram():
     string1 = b"anagram"

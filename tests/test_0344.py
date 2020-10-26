@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0344-reverse-string/reverse-string.so'
-c_lib = ctypes.CDLL(c_path)
+c_lib = ctypes.CDLL('../solutions/0344-reverse-string/reverse-string.so')
 
 def test_reverse_string():
     string = "Hello World"

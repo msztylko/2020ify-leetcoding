@@ -1,7 +1,6 @@
 import ctypes
 
-c_path = '/home/marcin/code/2020ify-leetcoding/solutions/0371-sum-two-integers/sum-two-integers.so'
-c_lib = ctypes.CDLL(c_path)
+c_lib = ctypes.CDLL('../solutions/0371-sum-two-integers/sum-two-integers.so')
 
 def test_sum_two_integers():
     a = 2

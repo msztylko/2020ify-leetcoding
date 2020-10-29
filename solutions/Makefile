@@ -3,7 +3,7 @@ CSHARED=-fPIC -shared
 
 all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009 0693 $\
- 0190 1464 0961 0201 1486 1491 0509 0965 1550 1010
+ 0190 1464 0961 0201 1486 1491 0509 0965 1550 1010 0009
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -71,6 +71,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 1550-consecutive-odd/consecutive-odd.so 1550-consecutive-odd/1550.c
 1010:
 	gcc $(CSHARED) -o 1010-divisible-pairs/divisible-pairs.so 1010-divisible-pairs/1010.c
+0009:
+	gcc $(CSHARED) -o 0009-palindrome-number/palindrome-number.so 0009-palindrome-number/0009.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -105,3 +107,4 @@ clean:
 	rm -f 0965-univalued-binary-tree/univalued-binary-tree.so
 	rm -f 1550-consecutive-odd/consecutive-odd.so
 	rm -f 1010-divisible-pairs/divisible-pairs.so
+	rm -f 0009-palindrome-number/palindrome-number.so

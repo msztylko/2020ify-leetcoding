@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <string.h>
 
 bool detectCapitalUse(char * word) {
     if (strlen(word) == 1) { return true; }

@@ -4,7 +4,7 @@ CSHARED=-fPIC -shared
 all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009 0693 $\
  0190 1464 0961 0201 1486 1491 0509 0965 1550 1010 0009 1523 $\
- 1137 1287 0387 1394 0258 0896 0520
+ 1137 1287 0387 1394 0258 0896 0520 0268
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -90,6 +90,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0896-monotonic-array/monotonic-array.so 0896-monotonic-array/0896.c
 0520:
 	gcc $(CSHARED) -o 0520-detect-capital/detect-capital.so 0520-detect-capital/0520.c
+0268:
+	gcc $(CSHARED) -o 0268-missing-number/missing-number.so 0268-missing-number/0268.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -133,3 +135,4 @@ clean:
 	rm -f 0258-add-digits/add-digits.so
 	rm -f 0896-monotonic-array/monotonic-array.so
 	rm -f 0520-detect-capital/detect-capital.so
+	rm -f 0268-missing-number/missing-number.so

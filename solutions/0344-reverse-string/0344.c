@@ -1,31 +1,9 @@
-#include <stdio.h>
-#include <string.h>
-
-void reverseString(char* s, int sSize){
-    char *startPtr = s;
-    char *endPtr = s + sSize - 1;
-    char temp;
-
-    while(startPtr < endPtr) {
-        temp = *endPtr;
-        *endPtr = *startPtr;
-        *startPtr = temp;    
-        startPtr++;
-        endPtr--;
+void reverseString(char *s, int sSize) {
+    int c, i, j;
+    
+    for (i = 0, j = sSize - 1; i < j; i++, j--) {
+        c = s[i];
+        s[i] = s[j];
+        s[j] = c;
     }
-};
-
-// int main(void) 
-// {
-//     char str1[] = "hello";
-//     int sSize1 = strlen(str1);
-//     printf("%s\n", str1);
-//     reverseString(str1, sSize1);
-//     printf("%s\n", str1);
-// 
-//     char str2[] = "Hannah";
-//     int sSize2 = strlen(str2);
-//     printf("%s\n", str2);
-//     reverseString(str2, sSize2);
-//     printf("%s\n", str2);
-// }
+}

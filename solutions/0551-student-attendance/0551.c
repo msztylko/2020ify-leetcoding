@@ -3,7 +3,6 @@
 
 bool checkRecord(char * s) {
     int Acounter = 0;
-    int Lcounter = 0;
     int length = strlen(s);
     
     for (int i = 0; i < length; i++) {

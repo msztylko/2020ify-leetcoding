@@ -5,7 +5,7 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0191 0231 0342 0007 0263 0461 0069 0367 0762 0476 1009 0693 $\
  0190 1464 0961 0201 1486 1491 0509 0965 1550 1010 0009 1523 $\
  1137 1287 0387 1394 0258 0896 0520 0268 0551 0724 0434 1346 $\
- 0747 0507
+ 0747 0507 0035
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -105,6 +105,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0747-dominant-index/dominant-index.so 0747-dominant-index/0747.c
 0507:
 	gcc $(CSHARED) -o 0507-perfect-number/perfect-number.so 0507-perfect-number/0507.c
+0035:
+	gcc $(CSHARED) -o 0035-search-insert/search-insert.so 0035-search-insert/0035.c
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
 	rm -f 1323-maximum-69-number/maximum-69-number.so
@@ -155,3 +157,4 @@ clean:
 	rm -f 1346-check-exist/check-exist.so
 	rm -f 0747-dominant-index/dominant-index.so
 	rm -f 0507-perfect-number/perfect-number.so
+	rm -f 0035-search-insert/search-insert.so

@@ -1,4 +1,4 @@
-int dominantIndex(int* nums, int numsSize){
+int dominantIndex(int* nums, int numsSize) {
     int max = 0;
     int index = 0;
     
@@ -9,13 +9,10 @@ int dominantIndex(int* nums, int numsSize){
         }
     }
     
-    for (int i = 0; i < numsSize; i++) {
-        if (index != i && nums[index] > 2*nums[i]) {
-            continue;
-        } else if (index != i && nums[index] < 2*nums[i]) {
+    for (int i = 0; i <numsSize; i++) {
+        if (index != i && 2*nums[i] > max) {
             return -1;
         }
     }
     return index;
 }
-            

@@ -6,7 +6,7 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0190 1464 0961 0201 1486 1491 0509 0965 1550 1010 0009 1523 $\
  1137 1287 0387 1394 0258 0896 0520 0268 0551 0724 0434 1346 $\
  0747 0507 0035 1512 1342 1281 0977 1089 0088 1534 0374 0278 $\
- 0852
+ 0852 1051
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -128,6 +128,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0278-first-bad-version/first-bad-version.so 0278-first-bad-version/0278.c 
 0852:
 	gcc $(CSHARED) -o 0852-peak-index/peak-index.so 0852-peak-index/0852.c
+1051:
+	gcc $(CSHARED) -o 1051-height-checker/height-checker.so 1051-height-checker/1051.c
 
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
@@ -190,3 +192,4 @@ clean:
 	rm -f 0374-guess-number/guess-number.so
 	rm -f 0278-first-bad-version/first-bad-version.so
 	rm -f 0852-peak-index/peak-index.so
+	rm -f 1051-height-checker/height-checker.so

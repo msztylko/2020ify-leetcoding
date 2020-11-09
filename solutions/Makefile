@@ -6,7 +6,7 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0190 1464 0961 0201 1486 1491 0509 0965 1550 1010 0009 1523 $\
  1137 1287 0387 1394 0258 0896 0520 0268 0551 0724 0434 1346 $\
  0747 0507 0035 1512 1342 1281 0977 1089 0088 1534 0374 0278 $\
- 0852 1051 1207 1502 0345
+ 0852 1051 1207 1502 0345 0628
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -136,6 +136,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 1502-arithmetic-progression/arithmetic-progression.so 1502-arithmetic-progression/1502.c
 0345:
 	gcc $(CSHARED) -o 0345-reverse-vowels/reverse-vowels.so 0345-reverse-vowels/0345.c
+0628:
+	gcc $(CSHARED) -o 0628-max-product/max-product.so 0628-max-product/0628.c
 
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
@@ -202,3 +204,4 @@ clean:
 	rm -f 1207-unique-number/unique-number.so
 	rm -f 1502-arithmetic-progession/arithmetic-progression.so
 	rm -f 0345-reverse-vowels/reverse-vowels.so
+	rm -f 0628-max-product/max-product.so

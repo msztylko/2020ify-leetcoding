@@ -6,7 +6,7 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  0190 1464 0961 0201 1486 1491 0509 0965 1550 1010 0009 1523 $\
  1137 1287 0387 1394 0258 0896 0520 0268 0551 0724 0434 1346 $\
  0747 0507 0035 1512 1342 1281 0977 1089 0088 1534 0374 0278 $\
- 0852 1051 1207 1502 0345 0628 0917
+ 0852 1051 1207 1502 0345 0628 0917 0027
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -140,6 +140,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0628-max-product/max-product.so 0628-max-product/0628.c
 0917:
 	gcc $(CSHARED) -o 0917-reverse-letters/reverse-letters.so 0917-reverse-letters/0917.c
+0027:
+	gcc $(CSHARED) -o 0027-remove-element/remove-element.so 0027-remove-element/0027.c
 
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
@@ -208,3 +210,4 @@ clean:
 	rm -f 0345-reverse-vowels/reverse-vowels.so
 	rm -f 0628-max-product/max-product.so
 	rm -f 0917-reverse-letters/reverse-letters.so
+	rm -f 0027-remove-element/remove-element.so

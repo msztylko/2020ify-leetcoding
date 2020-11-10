@@ -1,21 +1,15 @@
 #include <math.h>
 
-int isPrime(int n)
+int isPrime(int num)
 {
-    int i = 0;
-    int square_n = (int)sqrt(n) + 1;
-    
-    if (n == 0 || n == 1) {
-        return 0;
-    }
-    
-    for (i = 2; i < square_n; i++) {
-        if (n % i == 0) {
-            return 0;
-        }   
-    }
-    
-    return 1;
+     if (num <= 1) return 0;
+     if (num % 2 == 0 && num > 2) return 0;
+     for(int i = 3; i < sqrt(num) + 1; i+= 2)
+     {
+         if (num % i == 0)
+             return 0;
+     }
+     return 1;
 }
 
 int countPrimes(int n)

@@ -3,11 +3,10 @@ int numberOfSteps (int num) {
     while (num) {
         if (num % 2 == 0 ) {
             num /= 2;
-            steps++;
         } else {
             num -= 1;
-            steps++;
         }
+        steps++;
     }
     return steps;
 }

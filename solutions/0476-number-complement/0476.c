@@ -1,12 +1,12 @@
 int findComplement(int N) {
     if(N == 0) return 1;
     
-    long ret = N;
+    int ret = N;
     long mask = 1;
     
     while(mask <= ret) {   
-        ret = ret ^ mask;  
-        mask = mask << 1;  
+        ret ^= mask;  
+        mask <<= 1;  
     }
     return ret;
 }

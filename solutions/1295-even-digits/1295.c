@@ -1,8 +1,6 @@
 #include <stdbool.h>
 
 bool hasEvenDigits(int n) {
-    if (n / 10 == 0) return false;
-    
     int counter = 0;
     while(n) {
         n /= 10;

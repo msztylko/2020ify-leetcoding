@@ -4,7 +4,7 @@ int findLucky(int* arr, int arrSize) {
     for (int i = 0; i < arrSize; i++) {
         hashmap[arr[i]]++;
     }
-    int max = 0;
+    int max = -1;
     for (int i = 1; i < arrSize + 1; i++) {
         if (hashmap[i] == i) {
             if (i > max) {
@@ -12,6 +12,5 @@ int findLucky(int* arr, int arrSize) {
             }
         }
     }
-    return (max != 0) ? max : -1;
+    return max;
 }
-

@@ -1,15 +1,12 @@
 void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
-    int l_ptr = nums1Size - 1; 
-    int n1_ptr = m - 1; 
-    int n2_ptr = n - 1; 
+    int ptr1 = m - 1;
+    int ptr2 = n - 1;
+    int index = nums1Size - 1;
     
-    while(n2_ptr >=  0) {
-        if(n1_ptr >= 0 && nums1[n1_ptr] > nums2[n2_ptr]) {
-            nums1[l_ptr--] = nums1[n1_ptr--]; 
-        }
-        else { 
-            nums1[l_ptr--] = nums2[n2_ptr--]; 
-        }
+    while (ptr2 >= 0) {
+        if (ptr1 >= 0 && nums1[ptr1] > nums2[ptr2])
+            nums1[index--] = nums1[ptr1--];
+        else
+            nums1[index--] = nums2[ptr2--];
     }
-} 
-
+}

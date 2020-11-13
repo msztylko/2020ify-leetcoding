@@ -7,9 +7,7 @@
  *       * int guess(int num);
  *        */
 
-int guessNumber(int n) {
-    if (n == 1) { return 1; }
-    
+int guessNumber(int n) {    
     int ans;
     
     int low = 1;

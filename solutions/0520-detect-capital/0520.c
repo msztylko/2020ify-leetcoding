@@ -2,8 +2,6 @@
 #include <string.h>
 
 bool detectCapitalUse(char * word) {
-    if (strlen(word) == 1) { return true; }
-    
     int i, small = 0, big = 0;
     
     for(i = 0; word[i]; i++) {

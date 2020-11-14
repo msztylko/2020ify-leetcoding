@@ -7,7 +7,7 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
  1137 1287 0387 1394 0258 0896 0520 0268 0551 0724 0434 1346 $\
  0747 0507 0035 1512 1342 1281 0977 1089 0088 1534 0374 0278 $\
  0852 1051 1207 1502 0345 0628 0917 0027 1295 0026 0941 1480 $\
- 1299 0905 0728 1351
+ 1299 0905 0728 1351 0709
 
 0344:
 	gcc $(CSHARED) -o 0344-reverse-string/reverse-string.so 0344-reverse-string/0344.c
@@ -159,6 +159,8 @@ all: 0344 1323 0136 0169 0283 0013 0202 0204 0242 0371 0326 $\
 	gcc $(CSHARED) -o 0728-self-dividing/self-dividing.so 0728-self-dividing/0728.c
 1351:
 	gcc $(CSHARED) -o 1351-negative-matrix/negative-matrix.so 1351-negative-matrix/1351.c
+0709:
+	gcc $(CSHARED) -o 0709-to-lower/to-lower.so 0709-to-lower/0709.c
 
 clean:
 	rm -f 0344-reverse-string/reverse-string.so
@@ -236,3 +238,4 @@ clean:
 	rm -f 0905-sort-parity/sort-parity.so
 	rm -f 0728-self-dividing/self-dividing.so
 	rm -f 1351-negative-matrix/negative-matrix
+	rm -f 0709-to-lower/to-lower.so

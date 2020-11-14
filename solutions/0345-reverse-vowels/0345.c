@@ -1,5 +1,5 @@
-#include <string.h>
 #include <stdbool.h>
+#include <string.h>
 
 bool isVowel(char letter) {
     if (letter == 'e' ||
@@ -18,24 +18,21 @@ bool isVowel(char letter) {
     }
 }
 
-char *reverseVowels(char * s) {
+char * reverseVowels(char * s) {
     int start = 0;
     int end = strlen(s) - 1;
     
     while (start < end) {
         if (isVowel(s[start]) && isVowel(s[end])) {
             char temp = s[start];
-            s[start] = s[end];
-            s[end] = temp;
-            end--;
-            start++;
+            s[start++] = s[end];
+            s[end--] = temp;
         } else if (isVowel(s[start])) {
             end--;
         } else if (isVowel(s[end])) {
             start++;
         } else {
-            end--;
-            start++;
+            end--, start++;
         }
     }
     return s;

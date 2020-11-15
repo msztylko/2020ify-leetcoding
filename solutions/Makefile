@@ -186,7 +186,7 @@ clean:
 	rm -f 0367-valid-perfect-square/valid-perfect-square.so
 	rm -f 0762-count-prime-bits/count-prime-bits.so
 	rm -f 0476-number-complement/number-complement.so
-	rm -f 1009-complemet-base-10/complement-base-10.so
+	rm -f 1009-complement-base-10/complement-base-10.so
 	rm -f 0693-alternating-bits/alternating-bits.so
 	rm -f 0190-reverse-bits/reverse-bits.so
 	rm -f 1464-max-product/max-product.so
@@ -220,14 +220,14 @@ clean:
 	rm -f 1281-product-sum/product-sum.so
 	rm -f 0977-sorted-squares/sorted-squares.so
 	rm -f 1089-duplicate-zeros/duplicate-zeros.so
-	rm -f 0088-merge-sorted-array/merge-sorted-array
+	rm -f 0088-merge-sorted-array/merge-sorted-array.so
 	rm -f 1534-count-triplets/count-triplets.so
 	rm -f 0374-guess-number/guess-number.so
 	rm -f 0278-first-bad-version/first-bad-version.so
 	rm -f 0852-peak-index/peak-index.so
 	rm -f 1051-height-checker/height-checker.so
 	rm -f 1207-unique-number/unique-number.so
-	rm -f 1502-arithmetic-progession/arithmetic-progression.so
+	rm -f 1502-arithmetic-progression/arithmetic-progression.so
 	rm -f 0345-reverse-vowels/reverse-vowels.so
 	rm -f 0628-max-product/max-product.so
 	rm -f 0917-reverse-letters/reverse-letters.so
@@ -239,6 +239,6 @@ clean:
 	rm -f 1299-replace-elements/replace-elements.so
 	rm -f 0905-sort-parity/sort-parity.so
 	rm -f 0728-self-dividing/self-dividing.so
-	rm -f 1351-negative-matrix/negative-matrix
+	rm -f 1351-negative-matrix/negative-matrix.so
 	rm -f 0709-to-lower/to-lower.so
 	rm -f 1365-count-smaller/count-smaller.so

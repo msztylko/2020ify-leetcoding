@@ -9,7 +9,8 @@ bool checkRecord(char *s) {
             l++;
         else 
             l = 0;
-    if(a >= 2 || l > 2) return false;
+        if(a >= 2 || l > 2) 
+            return false;
     }
     return true;
 }

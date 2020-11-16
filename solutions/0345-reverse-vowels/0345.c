@@ -23,16 +23,14 @@ char * reverseVowels(char * s) {
     int end = strlen(s) - 1;
     
     while (start < end) {
-        if (isVowel(s[start]) && isVowel(s[end])) {
+        if (!isVowel(s[start]))
+            start++;
+        else if (!isVowel(s[end]))
+            end--;
+        else {
             char temp = s[start];
             s[start++] = s[end];
             s[end--] = temp;
-        } else if (isVowel(s[start])) {
-            end--;
-        } else if (isVowel(s[end])) {
-            start++;
-        } else {
-            end--, start++;
         }
     }
     return s;

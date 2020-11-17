@@ -1,9 +1,8 @@
 int xorOperation(int n, int start) {
-    int out = start;
-        
+    int ans = start;
+
     for (int i = 1; i < n; i++) {
-        int elem = start + 2*i;
-        out ^= elem;
+        ans ^= start + 2*i;
     }
-    return out;
+    return ans;
 }

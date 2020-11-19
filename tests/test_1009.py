@@ -1,8 +1,11 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/1009-complement-base-10/complement-base-10.so')
 
-def test_complement_base_10():
-    number = 10
-    out = c_lib.bitwiseComplement(number)
-    assert out == 5
+@pytest.mark.parametrize('num, ans', [(5, 2), 
+                                      (7, 0),
+                                      (10, 5)])
+def test_complement_base_10(num, ans):
+    out = c_lib.bitwiseComplement(num)
+    assert out == ans

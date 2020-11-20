@@ -10,5 +10,5 @@ bool isPalindrome(int x){
         x /= 10;
     } while(x);
     
-    return val == original;
+    return (val == original);
 }

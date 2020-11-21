@@ -1,8 +1,9 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/0069-sqrt/sqrt.so')
 
-def test_sqrt():
-    number = 17
-    out = c_lib.mySqrt(number)
-    assert out == 4 
+@pytest.mark.parametrize('num, ans', [(4,2), (8,2)])
+def test_sqrt(num, ans):
+    out = c_lib.mySqrt(num)
+    assert out == ans

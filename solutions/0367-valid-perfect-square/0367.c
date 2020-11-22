@@ -1,11 +1,13 @@
 #include <stdbool.h>
 
-bool isPerfectSquare(int num){
-    long result = 0, i=1;
+bool isPerfectSquare(int num) {
+    if (num < 1) return false;
+    if (num == 1) return true;
     
-    while (result < num) {
-        result = i*i;
+    long i = 1, square = 1;
+    while (square < num) {
         i++;
+        square = i*i;
     }
-    return (result==num);
+    return (square == num);
 }

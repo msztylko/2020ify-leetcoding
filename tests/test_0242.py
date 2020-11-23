@@ -1,8 +1,10 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/0242-valid-anagram/valid-anagram.so')
 
-def test_is_anagram():
-    string1 = b"anagram"
-    string2 = b"nagaram"
-    assert c_lib.isAnagram(string1, string2)
+@pytest.mark.parametrize('str1, str2, ans',
+                        [(b"anagram", b"nagaram", True),
+                         (b"rat", b"car", False)])
+def test_is_anagram(str1, str2, ans):
+    assert c_lib.isAnagram(str1, str2) == ans

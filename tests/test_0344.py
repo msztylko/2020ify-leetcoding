@@ -1,11 +1,11 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/0344-reverse-string/reverse-string.so')
 
-def test_reverse_string():
-    string = "Hello World"
-    string_len = len(string)
-    mutable_string = ctypes.create_string_buffer(string.encode())
-    c_lib.reverseString(mutable_string, string_len)
-    string_out = mutable_string.value.decode()
-    assert string[::-1] == string_out
+@pytest.mark.parametrize('string, ans',
+                        [(b"Hello World", b"dlroW olleH"),
+                         (b"Hannah", b"hannaH")])
+def test_reverse_string(string, ans):
+    c_lib.reverseString(string, len(string))
+    assert string == ans

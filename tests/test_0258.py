@@ -1,8 +1,11 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/0258-add-digits/add-digits.so')
 
-def test_add_digits():
-    number = 38
-    out = c_lib.addDigits(number)
-    assert out == 2 
+@pytest.mark.parametrize('num, ans', [(38, 2),
+                                      (1, 1),
+                                      (125, 8)])
+def test_add_digits(num, ans):
+    out = c_lib.addDigits(num)
+    assert out == ans

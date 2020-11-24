@@ -1,8 +1,13 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/0434-segment-string/segment-string.so')
 
-def test_segment_string():
-    array = b"Of all the gin joints in all the towns in all the world,   "
-    out = c_lib.countSegments(array)
-    assert out == 13
+@pytest.mark.parametrize('str, ans',
+[(b'Hello, my name is John', 5),
+ (b'Hello', 1),
+ (b"love live! mu'sic forever", 4),
+ (b"", 0)])
+def test_segment_string(str, ans):
+    out = c_lib.countSegments(str)
+    assert out == ans

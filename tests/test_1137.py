@@ -1,8 +1,12 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/1137-tribonacci/tribonacci.so')
 
-def test_tribonacci():
-    number = 35
-    out = c_lib.tribonacci(number)
-    assert out == 615693474
+@pytest.mark.parametrize('num, ans',
+                        [(4, 4),
+                         (25, 1389537),
+                         (37, 2082876103)])
+def test_tribonacci(num, ans):
+    out = c_lib.tribonacci(num)
+    assert out == ans

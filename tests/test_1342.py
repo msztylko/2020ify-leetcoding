@@ -1,8 +1,11 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/1342-number-steps/number-steps.so')
 
-def test_number_steps():
-    number = 123456
-    out = c_lib.numberOfSteps(number)
-    assert out == 22
+@pytest.mark.parametrize('num, ans', [(14, 6), 
+                                      (8, 4),
+                                      (123, 12)])
+def test_number_steps(num, ans):
+    out = c_lib.numberOfSteps(num)
+    assert out == ans

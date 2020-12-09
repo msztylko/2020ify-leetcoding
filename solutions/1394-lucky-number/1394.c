@@ -6,11 +6,9 @@ int findLucky(int* arr, int arrSize) {
     }
     int max = -1;
     for (int i = 0; i < arrSize; i++) {
-        if (hashmap[arr[i]] == arr[i]) {
-            if (arr[i] > max) {
+        if (hashmap[arr[i]] == arr[i] && arr[i] > max) {
                 max = arr[i];
             }
         }
-    }
     return max;
 }

@@ -1,3 +1,19 @@
+#define MAX 37
+
+int tribonacci_array(int n) {
+    int i, T[MAX+1] = {0};
+    
+    T[0] = 0;
+    T[1] = 1;
+    T[2] = 1;
+    
+    for (i = 3; i <= MAX; i++) {
+        T[i] = T[i-1] + T[i-2] + T[i-3];
+    }
+    
+    return T[n];
+}
+
 int tribonacci(int n) {
     if (n == 0) { return 0; }
     if (n == 1 || n == 2) { return 1;}

@@ -4,8 +4,11 @@ int countSegments(char * s) {
     
     for (int i = 0; s[i]; i++) {
         if (s[i] != ' ') {
-            if (inWord == 0)
+            if (inWord) {
+                continue;
+            } else {
                 counter++;
+            }
             inWord = 1;
         } else {
             inWord = 0;

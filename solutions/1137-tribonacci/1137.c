@@ -7,7 +7,7 @@ int tribonacci_array(int n) {
     T[1] = 1;
     T[2] = 1;
     
-    for (i = 3; i <= MAX; i++) {
+    for (i = 3; i <= n; i++) {
         T[i] = T[i-1] + T[i-2] + T[i-3];
     }
     

@@ -1,10 +1,11 @@
 int hammingWeight(unsigned int n) {
-    int counter = 0;
-    while (n != 0) {
-        if (n % 2 == 1) {
-            counter++;
+    int weight = 0;
+    
+    while (n) {
+        if (n & 1) {
+            weight++;
         }
-        n /= 2;
+        n >>= 1;
     }
-    return counter;
+    return weight;
 }

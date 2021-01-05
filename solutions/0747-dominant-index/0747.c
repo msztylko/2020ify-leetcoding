@@ -1,18 +1,19 @@
 int dominantIndex(int* nums, int numsSize) {
-    int max = 0;
-    int index = 0;
+    
+    int index = 0, first = 0, second = 0;
     
     for (int i = 0; i < numsSize; i++) {
-        if (nums[i] > max) {
-            max = nums[i];
+        if (nums[i] > first) {
+            second = first;
+            first = nums[i];
             index = i;
+        } else if (nums[i] > second) {
+            second = nums[i];
         }
     }
     
-    for (int i = 0; i <numsSize; i++) {
-        if (index != i && 2*nums[i] > max) {
-            return -1;
-        }
-    }
-    return index;
+    if (first >= 2*second)
+        return index;
+        
+    return -1;
 }

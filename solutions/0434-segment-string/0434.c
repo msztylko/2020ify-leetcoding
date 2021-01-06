@@ -1,18 +1,17 @@
 int countSegments(char * s) {
-    int counter = 0;
-    int inWord = 0;
+    int count = 0, inWord = 0;
     
     for (int i = 0; s[i]; i++) {
         if (s[i] != ' ') {
-            if (inWord) {
-                continue;
+            if (inWord == 0) {
+                count++;
+                inWord = 1;
             } else {
-                counter++;
+                continue;
             }
-            inWord = 1;
         } else {
             inWord = 0;
         }
     }
-    return counter;
+    return count;
 }

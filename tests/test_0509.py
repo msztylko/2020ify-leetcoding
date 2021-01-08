@@ -1,8 +1,10 @@
 import ctypes
+import pytest
 
 c_lib = ctypes.CDLL('../solutions/0509-fibonacci-number/fibonacci-number.so')
 
-def test_fibonacci_number():
+@pytest.mark.parametrize('function', [c_lib.fib, c_lib.fibArray])
+def test_fibonacci_number(function):
     number = 15
-    out = c_lib.fib(number)
+    out = function(number)
     assert out == 610

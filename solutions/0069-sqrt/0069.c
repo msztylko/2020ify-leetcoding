@@ -1,9 +1,8 @@
 int mySqrt(int x) {
-    long i = 1, sqrt = 1;
-        
-    while(sqrt <= x) {
+    long i = 1;
+    
+    while(i*i <= x)
         i++;
-        sqrt = i*i;   
-    }
-    return i -1;
+
+    return i-1;
 }

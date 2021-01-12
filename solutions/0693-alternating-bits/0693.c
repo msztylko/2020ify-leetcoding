@@ -1,13 +1,12 @@
 #include <stdbool.h>
 
-bool hasAlternatingBits(int n){
-    int last = n % 2;
-    int rest = n / 2;
+bool hasAlternatingBits(int n) {
+    int last = n % 2, rest = n / 2;
     
     while (last <= rest) {
-        if (last == (rest % 2))
+        if (last == (rest % 2)) {
             return false;
-        else {
+        } else {
             last = rest % 2;
             rest /= 2;
         }
